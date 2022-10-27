@@ -21,10 +21,12 @@
   </div>
   <button style="margin-top: 10px" type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-<div class="flex-row col-lg-4">
-  <label style="margin-right: 10px">Similarity</label>
-  <label>{{textSimilarity.similarity * 100}}%</label>
+<div *ngIf="textSimilarity">
+  <div class="flex-row col-lg-4">
+    <label style="margin-right: 10px">Similarity</label>
+    <label>{{textSimilarity.similarity * 100}}%</label>
+  </div>
 </div>
+
 
 <label type="text"></label>

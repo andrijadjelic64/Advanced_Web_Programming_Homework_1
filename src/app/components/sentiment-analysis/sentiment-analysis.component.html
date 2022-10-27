@@ -34,3 +34,10 @@
     </label>
   </div>
 </div>
+
+<div *ngIf="sentimentAnalysis">
+  <h4 > {{sentimentAnalysis.sentiment.score}} </h4>
+  <p  *ngIf="sentimentAnalysis" [style.background-color]="colorHex">
+    {{sentimentAnalysis.sentiment.type}}
+  </p>
+</div>

@@ -9,7 +9,10 @@ export class StorageService {
 
   public saveData(key: string, value: string) {
     localStorage.setItem(key, value);
+
   }
+
+
 
   public getData(key: string) {
     return localStorage.getItem(key)!.toString();

@@ -3,6 +3,7 @@ import {StorageService} from "../../service/storage.service";
 import {EntityExtractionService} from "../../service/entity-extraction.service";
 import {Entity} from "../../model/entity";
 import {Options} from "@angular-slider/ngx-slider";
+import {HistoryService} from "../../service/history.service";
 
 @Component({
   selector: 'app-entity-extraction',
@@ -26,7 +27,8 @@ export class EntityExtractionComponent implements OnInit {
   };
 
   constructor(private storageService: StorageService,
-              private entityService: EntityExtractionService) {
+              private entityService: EntityExtractionService,
+              private historyService: HistoryService) {
     this.text = '';
     this.token = '';
     this.atributes = ['image', 'abstract', 'categories'];
@@ -54,6 +56,7 @@ export class EntityExtractionComponent implements OnInit {
 
   submit() {
     console.log(this.buildIncludeQuery())
+    let url =
     this.entityService.getEntities(this.text, this.buildIncludeQuery(), this.value, this.storageService.getData('token')).subscribe(res => {
       this.entity = res;
     });

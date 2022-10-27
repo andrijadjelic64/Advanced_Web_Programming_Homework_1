@@ -5,6 +5,7 @@ import {TextSimilarityComponent} from "./app/components/text-similarity/text-sim
 import {LanguageDetectionComponent} from "./app/components/language-detection/language-detection.component";
 import {SentimentAnalysisComponent} from "./app/components/sentiment-analysis/sentiment-analysis.component";
 import {HomeComponent} from "./app/components/home/home.component";
+import {HistoryComponent} from "./app/components/history/history.component";
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: "sentiment-analysis",
     component: SentimentAnalysisComponent,
+  },
+  {
+    path: "history",
+    component: HistoryComponent,
   },
 ];
 

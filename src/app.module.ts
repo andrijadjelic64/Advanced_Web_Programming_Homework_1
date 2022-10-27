@@ -12,6 +12,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './app/components/home/home.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { HistoryComponent } from './app/components/history/history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     SentimentAnalysisComponent,
     LanguageDetectionComponent,
     HomeComponent,
+    HistoryComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
