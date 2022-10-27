@@ -1,0 +1,39 @@
+<form (submit)="submit()" class="mb-5">
+  <div class="form-group col-lg-12">
+    <label for="text1">Text</label>
+    <input type="text"
+           class="form-control"
+           id="text1"
+           [(ngModel)]="text"
+           name="text1"
+           [ngModelOptions]="{standalone: false}"
+           placeholder="Insert first text"
+    >
+    </div>
+  <button style="margin-top: 10px" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="form-check">
+  <input [(ngModel)]="clean" class="form-check-input" type="checkbox" value="" id="imageCheckbox">
+  <label class="form-check-label" for="imageCheckbox">
+    Clean
+  </label>
+</div>
+<div *ngIf="languageDetection">
+  <div *ngFor="let detectedLang of languageDetection.detectedLangs">
+    <div class="container col-lg-4">
+      <div class="d-flex justify-content-evenly">
+        <p>
+          <label style="margin-right: 10px" for="lang">Language:</label>
+          <label id="lang">{{detectedLang.lang}}</label>
+        </p>
+        <p>
+          <label style="margin-right: 10px" for="confidence">Confidence:</label>
+          <label id="confidence">{{detectedLang.confidence}}</label>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+<form (submit)="submit()" class="mb-5">
+  <div class="form-group col-lg-12">
+    <label for="text1">Text</label>
+    <input type="text"
+           class="form-control"
+           id="text1"
+           [(ngModel)]="text1"
+           name="text1"
+           [ngModelOptions]="{standalone: false}"
+           placeholder="Insert first text"
+    >
+    <label for="text2">Text</label>
+    <input type="text"
+           class="form-control"
+           id="text2"
+           [(ngModel)]="text2"
+           name="text2"
+           [ngModelOptions]="{standalone: false}"
+           placeholder="Insert second text"
+    >
+  </div>
+  <button style="margin-top: 10px" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="flex-row col-lg-4">
+  <label style="margin-right: 10px">Similarity</label>
+  <label>{{textSimilarity.similarity * 100}}%</label>
+</div>
+
+<label type="text"></label>

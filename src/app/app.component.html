@@ -1,0 +1,22 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a [routerLink]="'/'" class="navbar-brand">Demo 2</a>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a [routerLink]="'/'" class="nav-link active" aria-current="page">Home</a>
+          <a [routerLink]="'/entity-extraction'" class="nav-link active" aria-current="page">Entity Extraction</a>
+          <a [routerLink]="'/text-similarity'" class="nav-link active" aria-current="page">Text Similarity</a>
+          <a [routerLink]="'/language-detection'" class="nav-link active" aria-current="page">Language Detection</a>
+          <a [routerLink]="'/sentiment-analysis'" class="nav-link active" aria-current="page">Sentiment Analysis</a>
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container pt-3">
+  <router-outlet></router-outlet>
+</div>

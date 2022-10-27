@@ -1,0 +1,36 @@
+<form (submit)="submit()" class="mb-5">
+  <div class="form-group col-lg-12">
+    <label for="text1">Text</label>
+    <input type="text"
+           class="form-control"
+           id="text1"
+           [(ngModel)]="text"
+           name="text1"
+           [ngModelOptions]="{standalone: false}"
+           placeholder="Insert first text"
+    >
+  </div>
+  <button style="margin-top: 10px" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="mt-3">
+  <p>Primary color:</p>
+  <div class="form-check">
+    <input [(ngModel)]="lang" class="form-check-input" type="radio" name="language" id="autoRadio" value="auto" checked>
+    <label class="form-check-label" for="autoRadio">
+      Automatic
+    </label>
+  </div>
+  <div class="form-check">
+    <input [(ngModel)]="lang" class="form-check-input" type="radio" name="language" id="enRadio" value="en">
+    <label class="form-check-label" for="enRadio">
+      English
+    </label>
+  </div>
+  <div class="form-check">
+    <input [(ngModel)]="lang" class="form-check-input" type="radio" name="language" id="itRadio" value="it">
+    <label class="form-check-label" for="itRadio">
+      Italian
+    </label>
+  </div>
+</div>

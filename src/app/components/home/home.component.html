@@ -1,0 +1,14 @@
+<form (submit)="submit()" class="mb-5">
+  <div class="form-group col-lg-4">
+    <label for="token">Token</label>
+    <input type="text"
+           class="form-control"
+           id="token"
+           [(ngModel)]="token.tokenString"
+           name="token"
+           [ngModelOptions]="{standalone: false}"
+           placeholder="Token"
+    >
+  </div>
+  <button style="margin-top: 10px" type="submit" class="btn btn-primary">Submit</button>
+</form>
